@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Laba12\Laba12.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Bib10">
+      <HintPath>..\Bib10\obj\Debug\net7.0\Bib10.dll</HintPath>
+    </Reference>
+    <Reference Include="Console10">
+      <HintPath>..\Console10\obj\Debug\net7.0\Console10.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
