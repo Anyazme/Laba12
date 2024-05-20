@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba12_1", "..\Laba12_1\Lab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba12_Test", "..\Laba12_Test\Laba12_Test.csproj", "{59DEE1B8-F42D-49C6-971E-E9DD7B0EBD89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba12_2", "..\Laba12_2\Laba12_2.csproj", "{6A0E7A32-774A-4432-92AD-85E317A6C52F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba12_2", "..\Laba12_2\Laba12_2.csproj", "{6A0E7A32-774A-4432-92AD-85E317A6C52F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba12_3", "..\Laba12_3\Laba12_3.csproj", "{049401CD-FDA6-481E-8ABD-99BD48B66CCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba12_3", "..\Laba12_3\Laba12_3.csproj", "{049401CD-FDA6-481E-8ABD-99BD48B66CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba12_4", "..\Laba12_4\Laba12_4.csproj", "{38186106-E3B4-43B0-9325-D0632B12FFB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{049401CD-FDA6-481E-8ABD-99BD48B66CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{049401CD-FDA6-481E-8ABD-99BD48B66CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{049401CD-FDA6-481E-8ABD-99BD48B66CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38186106-E3B4-43B0-9325-D0632B12FFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38186106-E3B4-43B0-9325-D0632B12FFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38186106-E3B4-43B0-9325-D0632B12FFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38186106-E3B4-43B0-9325-D0632B12FFB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
