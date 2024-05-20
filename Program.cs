@@ -1,91 +1,58 @@
-﻿using Laba12_2;
-using Bib10;
+﻿using Bib10;
 using System;
-
-public class Program
+namespace Laba12_3
 {
-	static void Main(string[] args)
+	public class Program
 	{
-		MyHashTable<Aircraft> myHash = new MyHashTable<Aircraft>();
-
-		bool ok = false;
-
-		while (!ok)
+		static void Main(string[] args)
 		{
-			Console.WriteLine("Меню:");
-			Console.WriteLine("1. Добавить воздушное судно");
-			Console.WriteLine("2. Вывести хеш таблицу");
-			Console.WriteLine("3. Проверить наличие воздушного судна");
-			Console.WriteLine("4. Удалить воздушное судно");
-			Console.WriteLine("5. Выход");
+			MyTree<Aircraft> tree = new MyTree<Aircraft>(10); // Создание дерева с 10 элементами
 
-			Console.Write("Выберите действие: ");
-			int choice = int.Parse(Console.ReadLine());
-
-			switch (choice)
+			while (true)
 			{
-				case 1:
-					{
+				Console.WriteLine("1. Показать дерево");
+				Console.WriteLine("2. Добавить элемент");
+				Console.WriteLine("3. Найти минимальный элемент");
+				Console.WriteLine("4. Удалить элемент");
+				Console.WriteLine("5. Удалить дерево");
+				Console.WriteLine("6. Выход");
+
+				Console.Write("Выберите действие: ");
+				int choice = int.Parse(Console.ReadLine());
+
+				switch (choice)
+				{
+					case 1:
+						Console.WriteLine("Дерево:");
+						tree.ShowTree();
+						break;
+					case 2:
+						Console.Write("Введите данные для добавления: ");
 						Aircraft aircraft = new Aircraft();
 						aircraft.RandomInit();
-						myHash.AddItem(aircraft);
-						Console.WriteLine("Воздушное судно добавлено в хеш таблицу.");
-					}
-					break;
-
-				case 2:
-					{
-						Console.WriteLine("Хеш таблица:");
-						myHash.Print();
-					}
-					break;
-
-				case 3:
-					{
-						Console.Write("Введите данные о воздушном судне для проверки наличия: ");
+						Console.WriteLine("Элемент добавлен");
+						break;
+					case 3:
+						Console.WriteLine("Минимальный элемент: " + tree.FindMin());
+						break;
+					case 4:
+						Console.Write("Введите элемент для удаления: ");
 						Aircraft aircraft1 = new Aircraft();
 						aircraft1.Init();
-						if (myHash.Contains(aircraft1))
-						{
-							Console.WriteLine("Воздушное судно присутствует в хеш таблице.");
-						}
-						else
-						{
-							Console.WriteLine("Воздушное судно отсутствует в хеш таблице.");
-						}
-					}
-					break;
-
-				case 4:
-					{
-						Console.Write("Введите данные о воздушном судне для удаления: ");
-						Aircraft aircraft2 = new Aircraft();
-						aircraft2.Init();
-						if (myHash.RemoveData(aircraft2))
-						{
-							Console.WriteLine("Воздушное судно удалено из хеш таблицы.");
-						}
-						else
-						{
-							Console.WriteLine("Воздушное судно не найдено в хеш таблице.");
-						}
-					}
-					break;
-
-				case 5:
-					{
-						ok = true;
-					}
-					break;
-
-				default:
-					Console.WriteLine("Некорректный выбор. Попробуйте еще раз.");
-					break;
+						Console.WriteLine("Элемент удален");
+						break;
+					case 5:
+						tree.DeleteTree();
+						Console.WriteLine("Дерево удалено.");
+						break;
+					case 6:
+						Environment.Exit(0);
+						break;
+					default:
+						Console.WriteLine("Некорректный выбор. Попробуйте снова.");
+						break;
+				}
 			}
 		}
-
-		Console.WriteLine("Программа завершена");
 	}
 }
-
-
